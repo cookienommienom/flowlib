@@ -1,0 +1,4 @@
+discord.py>=2.0.0
+SQLAlchemy>=1.4.0
+aiosqlite  # For SQLite async support
+asyncpg  # For PostgreSQL async support (if needed)

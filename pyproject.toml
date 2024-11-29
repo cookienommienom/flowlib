@@ -1,0 +1,33 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flowlib"
+version = "0.1.0"
+description = "A library to simplify creating workflows in discord.py bots."
+authors = [
+    { name = "Cookie", email = "cookie@idegrity.com" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+keywords = ["discord", "workflow", "bot"]
+
+dependencies = [
+    "discord.py>=2.0.0",
+    "SQLAlchemy>=1.4.0",
+    "aiosqlite",
+]
+
+[project.optional-dependencies]
+postgresql = ["asyncpg"]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/your_project"
+Repository = "https://github.com/yourusername/your_project"
+
+[tool.setuptools.packages.find]
+where = ["flowlib"]
