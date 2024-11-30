@@ -13,13 +13,11 @@ A Python library that extends `discord.py` to simplify creating workflows consis
 
 1. **Clone the Repository**
 
-    ```bash
-    git clone https://github.com/yourusername/your_project.git
-    cd your_project
+    git clone https://github.com/cookienommienom/flowlib/
+    cd flowlib
 
 2. **Install Dependencies**
 
-    ```bash
     pip install -r requirements.txt
 
 ## Usage
@@ -28,7 +26,6 @@ A Python library that extends `discord.py` to simplify creating workflows consis
 
 Create a bot script or use the provided example in `examples/bot.py`.
 
-    ```bash
     import discord
     from discord.ext import commands
     from flowlib import initialize_flow_library, FlowView, button, register_view
@@ -48,7 +45,6 @@ Create a bot script or use the provided example in `examples/bot.py`.
 
 Use the `@register_view` and `@button` decorators to define your workflow steps and buttons.
 
-    ```bash
     @register_view('start')
     class StartView(FlowView):
         ...
@@ -58,7 +54,6 @@ Use the `@register_view` and `@button` decorators to define your workflow steps 
 
 Start your bot by running your bot script.
 
-    ```bash
     python bot.py
 
     ## Configuration
@@ -67,7 +62,6 @@ Start your bot by running your bot script.
 
     By default, the library uses SQLite with `aiosqlite`. To use PostgreSQL with `asyncpg`, modify the `initialize_flow_library` call:
 
-    ```bash
     initialize_flow_library(bot, database_url="postgresql+asyncpg://user:password@localhost/dbname")
 
 Replace `user`, `password`, and `dbname` with your PostgreSQL credentials.
